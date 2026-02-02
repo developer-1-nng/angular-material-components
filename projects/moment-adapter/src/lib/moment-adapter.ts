@@ -12,7 +12,8 @@ import * as _moment from 'moment';
 import { default as _rollupMoment, Moment, MomentFormatSpecification, MomentInput } from 'moment';
 import { NgxMatDateAdapter } from '@angular-material-components/datetime-picker';
 
-const moment = _rollupMoment || _moment;
+// Use an `any`-typed alias to avoid TypeScript union-callability issues
+const moment: any = _rollupMoment || _moment;
 
 /** Configurable options for {@see MomentDateAdapter}. */
 export interface NgxMatMomentDateAdapterOptions {
