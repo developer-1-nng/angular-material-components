@@ -9,7 +9,7 @@ Angular Material Library provide extra components for every project (Datetime pi
 
 Please do not hesitate to contact us if you have any question or suggestion.
 
-Feel free to open the [issues](https://github.com/h2qutc/angular-material-components/issues) or provide a PR.
+Feel free to open the [issues](https://github.com/developer-1-nng/angular-material-components/issues) or provide a PR.
 
 If you like this project, support angular-material-components by starring⭐.
 

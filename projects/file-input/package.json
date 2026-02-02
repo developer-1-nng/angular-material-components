@@ -3,14 +3,15 @@
   "version": "16.0.1",
   "description": "Angular Material File Input",
   "author": "HO Hong Quan",
+  "maintainers": ["nng-dev <developer.1.nng@gmail.com>"],
   "repository": {
     "type": "git",
-    "url": "https://github.com/h2qutc/angular-material-components.git"
+    "url": "https://github.com/developer-1-nng/angular-material-components.git"
   },
   "bugs": {
-    "url": "https://github.com/h2qutc/angular-material-components/issues"
+    "url": "https://github.com/developer-1-nng/angular-material-components/issues"
   },
-  "homepage": "https://github.com/h2qutc/angular-material-components",
+  "homepage": "https://github.com/developer-1-nng/angular-material-components",
   "keywords": [
     "angular",
     "angular2",
