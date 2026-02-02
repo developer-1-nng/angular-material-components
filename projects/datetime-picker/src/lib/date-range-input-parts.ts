@@ -22,12 +22,11 @@ import {
   ValidatorFn,
   Validators,
 } from '@angular/forms';
+import { Subject } from 'rxjs';
 import {
-  CanUpdateErrorState,
   ErrorStateMatcher,
   MAT_DATE_FORMATS,
   MatDateFormats,
-  mixinErrorState
 } from '@angular/material/core';
 import { _computeAriaAccessibleName } from './aria-accessible-name';
 import { NgxMatDateAdapter } from './core/date-adapter';
@@ -74,7 +73,20 @@ abstract class NgxMatDateRangeInputPartBase<D>
   ngControl: NgControl;
 
   /** @docs-private */
-  abstract updateErrorState(): void;
+  public stateChanges = new Subject<void>();
+  /** Current error state */
+  public errorState = false;
+
+  /** Update the component's error state (no-op fallback). */
+  updateErrorState(): void {
+    // Fallback implementation when the Material mixin is unavailable.
+    // Concrete projects can override when needed.
+    const oldState = this.errorState;
+    this.errorState = !!(this.ngControl && this.ngControl.invalid && (this.ngControl.touched || (this._parentFormGroup && this._parentFormGroup.submitted)));
+    if (oldState !== this.errorState) {
+      this.stateChanges.next();
+    }
+  }
 
   protected abstract override _validator: ValidatorFn | null;
   protected abstract override _assignValueToModel(value: D | null): void;
@@ -191,7 +203,7 @@ abstract class NgxMatDateRangeInputPartBase<D>
   }
 }
 
-const _NgxMatDateRangeInputBase = mixinErrorState(NgxMatDateRangeInputPartBase);
+const _NgxMatDateRangeInputBase = NgxMatDateRangeInputPartBase;
 
 /** Input for entering the start date in a `mat-date-range-input`. */
 @Directive({
@@ -219,7 +231,7 @@ const _NgxMatDateRangeInputBase = mixinErrorState(NgxMatDateRangeInputPartBase);
     inputs: ['errorStateMatcher'],
     standalone: false
 })
-export class NgxMatStartDate<D> extends _NgxMatDateRangeInputBase<D> implements CanUpdateErrorState {
+export class NgxMatStartDate<D> extends _NgxMatDateRangeInputBase<D> {
   /** Validator that checks that the start date isn't after the end date. */
   private _startValidator: ValidatorFn = (control: AbstractControl): ValidationErrors | null => {
     const start = this._dateAdapter.getValidDateOrNull(
@@ -333,7 +345,7 @@ export class NgxMatStartDate<D> extends _NgxMatDateRangeInputBase<D> implements 
     inputs: ['errorStateMatcher'],
     standalone: false
 })
-export class NgxMatEndDate<D> extends _NgxMatDateRangeInputBase<D> implements CanUpdateErrorState {
+export class NgxMatEndDate<D> extends _NgxMatDateRangeInputBase<D> {
   /** Validator that checks that the end date isn't before the start date. */
   private _endValidator: ValidatorFn = (control: AbstractControl): ValidationErrors | null => {
     const end = this._dateAdapter.getValidDateOrNull(this._dateAdapter.deserialize(control.value));

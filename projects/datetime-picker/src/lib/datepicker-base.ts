@@ -46,7 +46,7 @@ import {
   ViewEncapsulation,
   inject,
 } from '@angular/core';
-import { CanColor, ThemePalette, mixinColor } from '@angular/material/core';
+import { ThemePalette } from '@angular/material/core';
 import { Observable, Subject, Subscription, merge } from 'rxjs';
 import { filter, take } from 'rxjs/operators';
 import { NgxMatCalendar, NgxMatCalendarView } from './calendar';
@@ -93,13 +93,11 @@ export const NGX_MAT_DATEPICKER_SCROLL_STRATEGY_FACTORY_PROVIDER = {
   useFactory: NGX_MAT_DATEPICKER_SCROLL_STRATEGY_FACTORY,
 };
 
-// Boilerplate for applying mixins to MatDatepickerContent.
+// Simple base for MatDatepickerContent (mixin removed for compatibility).
 /** @docs-private */
-const _NgxMatDatepickerContentBase = mixinColor(
-  class {
-    constructor(public _elementRef: ElementRef) { }
-  },
-);
+class _NgxMatDatepickerContentBase {
+  constructor(public _elementRef: ElementRef) {}
+}
 
 /**
  * Component used as the content for the datepicker overlay. We use this instead of using
@@ -129,7 +127,7 @@ const _NgxMatDatepickerContentBase = mixinColor(
 })
 export class NgxMatDatepickerContent<S, D = NgxExtractDateTypeFromSelection<S>>
   extends _NgxMatDatepickerContentBase
-  implements OnInit, AfterViewInit, OnDestroy, CanColor {
+  implements OnInit, AfterViewInit, OnDestroy {
   private _subscriptions = new Subscription();
   private _model: NgxMatDateSelectionModel<S, D>;
   /** Reference to the internal calendar component. */
@@ -167,6 +165,8 @@ export class NgxMatDatepickerContent<S, D = NgxExtractDateTypeFromSelection<S>>
 
   /** Whether the close button currently has focus. */
   _closeButtonFocused: boolean;
+
+  @Input() color?: ThemePalette;
 
   /** Portal with projected action buttons. */
   _actionsPortal: TemplatePortal | null = null;

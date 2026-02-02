@@ -11,7 +11,7 @@ mat-typography, mat-unselected-cell;
 $mat-datepicker-calendar-weekday-table-font-size, mat-datepicker-color,
 mat-datepicker-date-range-colors, mat-datepicker-density, mat-datepicker-unselected-cell;
 
-@import '../core/style/private';
-@import '../core/theming/palette';
-@import '../core/theming/theming';
-@import '../core/typography/typography-utils';
+@use '../core/style/private' as *;
+@use '../core/theming/palette' as *;
+@use '../core/theming/theming' as *;
+@use '../core/typography/typography-utils' as *;
