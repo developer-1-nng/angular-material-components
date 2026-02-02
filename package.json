@@ -1,6 +1,6 @@
 {
   "name": "angular-material-components",
-  "version": "17.0.0",
+  "version": "18.0.0",
   "description": "Angular Material Datetime Picker",
   "author": "HO Hong Quan",
   "maintainers": [
@@ -22,6 +22,8 @@
     "angular 14",
     "angular 15",
     "angular 16",
+    "angular 17",
+    "angular 18",
     "angular-material",
     "angular material datetime picker",
     "angular material time picker",
@@ -71,7 +73,7 @@
     "ngx-highlightjs": "^4.1.1",
     "rxjs": "~7.8.1",
     "tslib": "^2.3.1",
-    "zone.js": "~0.15.0"
+    "zone.js": "~0.14.10"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~18.2.21",
@@ -93,7 +95,7 @@
     "protractor": "~7.0.0",
     "ts-node": "~8.3.0",
     "tsickle": "^0.39.1",
-    "typescript": "~5.6.0",
+    "typescript": "~5.5.0",
     "@angular-eslint/builder": "^18.0.1",
     "@angular-eslint/eslint-plugin": "^18.0.1",
     "@angular-eslint/eslint-plugin-template": "^18.0.1",

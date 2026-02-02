@@ -1,6 +1,6 @@
 {
   "name": "@nng-components/angular-material-moment-adapter",
-  "version": "17.0.0",
+  "version": "18.0.0",
   "description": "Angular Material Moment Adapter",
   "author": "HO Hong Quan",
   "maintainers": ["nng-dev <developer.1.nng@gmail.com>"],
@@ -11,8 +11,8 @@
   },
   "homepage": "https://github.com/developer-1-nng/angular-material-components",
   "peerDependencies": {
-    "@angular/common": "^17.0.0",
-    "@angular/core": "^17.0.0",
+    "@angular/common": "^18.0.0",
+    "@angular/core": "^18.0.0",
     "moment": "^2.18.1"
   }
 }
