@@ -1,4 +1,4 @@
-# Angular Material DatetimePicker, Timepicker for @angular/material 16.x
+# Angular Material DatetimePicker, Timepicker for @angular/material 19.x
 
 
 ## Description
@@ -13,11 +13,11 @@ A DatetimePicker like @angular/material [Datepicker](https://material.angular.io
 
 ![Alt Text](demo_datetime_picker.png)
 
-Choose the version corresponding to your Angular version:
+ Choose the version corresponding to your Angular version:
 
  Angular     | @nng-components/angular-material-datetime-picker
  ----------- | -------------------
- 16          | 16.x+
+ 19          | 19.x+
 
 
 ## Getting started

@@ -1,4 +1,4 @@
-# Angular Material File Input for @angular/material 16.x
+# Angular Material File Input for @angular/material 19.x
 
 
 ## Description
@@ -14,11 +14,11 @@ An Angular Material File Input.
 
 ![Alt Text](demo_file_input.png)
 
-Choose the version corresponding to your Angular version:
+ Choose the version corresponding to your Angular version:
 
  Angular     | @nng-components/angular-material-file-input
  ----------- | -------------------
- 16          | 16.x+
+ 19          | 19.x+
 
 
 ## Getting started
