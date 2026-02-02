@@ -1,19 +1,13 @@
-# Angular Material DatetimePicker, Timepicker for @angular/material 7.x, 8.x, 9.x, 10.x, 11.x, 12.x, 13.x, 14.x, 15.x, 16.x
+# Angular Material DatetimePicker, Timepicker for @angular/material 16.x
 
-[![Build Status](https://travis-ci.com/h2qutc/angular-material-components.svg?branch=master)](https://travis-ci.com/h2qutc/angular-material-components)
-[![License](https://img.shields.io/npm/l/angular-material-components.svg)](https://www.npmjs.com/package/angular-material-components)
-[![npm version](https://badge.fury.io/js/%40angular-material-components%2Fdatetime-picker.svg)](https://www.npmjs.com/package/@angular-material-components/datetime-picker)
-[![Github All Releases](https://img.shields.io/npm/dt/@angular-material-components/datetime-picker.svg)]()
 
 ## Description
 
 A DatetimePicker like @angular/material [Datepicker](https://material.angular.io/components/datepicker/overview) by adding support for choosing time.
 
-<a href="https://www.buymeacoffee.com/h2qutc" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
-
 ## DEMO
 
-@see [LIVE DEMO AND DOCUMENTATION](https://h2qutc.github.io/angular-material-components/)
+@see [LIVE DEMO AND DOCUMENTATION](https://github.com/developer-1-nng/angular-material-components/)
 
 @see [DEMO stackblitz](https://stackblitz.com/edit/demo-ngx-mat-datetime-picker)
 
@@ -21,30 +15,22 @@ A DatetimePicker like @angular/material [Datepicker](https://material.angular.io
 
 Choose the version corresponding to your Angular version:
 
- Angular     | @angular-material-components/datetime-picker
+ Angular     | @nng-components/angular-material-datetime-picker
  ----------- | -------------------
  16          | 16.x+
- 15          | 15.x+ OR 9.x+ for legacy import
- 14          | 8.x+
- 13          | 7.x+
- 12          | 6.x+
- 11          | 5.x+
- 10          | 4.x+
- 9           | 2.x+
- 8           | 2.x+
- 7           | 2.x+
+
 
 ## Getting started
 
 ```
-npm install --save  @angular-material-components/datetime-picker
+npm install --save  @nng-components/angular-material-datetime-picker
 ```
 
 ## Setup
 Basically the same way the @angular/material Datepicker is configured and imported.
 
 ```
-import { NgxMatDatetimePickerModule, NgxMatTimepickerModule } from '@angular-material-components/datetime-picker';
+import { NgxMatDatetimePickerModule, NgxMatTimepickerModule } from '@nng-components/angular-material-datetime-picker';
 @NgModule({
    ...
    imports: [
@@ -127,11 +113,11 @@ The easiest way to ensure this is to import one of the provided date modules:
 | **Date type**         	| Date                       	| Moment                                                                              	|
 | **Supported locales** 	| en-US                      	| [See project for details](https://github.com/moment/moment/tree/develop/src/locale) 	|
 | **Dependencies**      	| None                       	| [Moment.js](https://momentjs.com/)                                                  	|
-| **Import from**       	| @angular-material-components/datetime-picker    	| [@angular-material-components/moment-adapter](https://www.npmjs.com/package/@angular-material-components/moment-adapter)      	|
+| **Import from**       	| @nng-components/angular-material-datetime-picker    	| [@nng-components/angular-material-moment-adapter](https://www.npmjs.com/package/@nng-components/angular-material-moment-adapter)      	|
 
 To use NgxMatMomentModule: 
    ```
-   npm install --save  @angular-material-components/moment-adapter
+   npm install --save  @nng-components/angular-material-moment-adapter
    ```
 
 Please note: NgxMatNativeDateModule is based off the functionality available in JavaScript's native Date object. Thus it is not suitable for many locales. One of the biggest shortcomings of the native Date object is the inability to set the parse format.
