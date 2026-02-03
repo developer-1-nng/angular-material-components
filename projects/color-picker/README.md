@@ -1,4 +1,4 @@
-# Angular Material Color Picker for @angular/material  19.x
+# Angular Material Color Picker for @angular/material 16.x, 17.x, 18.x, 19.x, 20.x
 
 ## Description
 
@@ -14,7 +14,11 @@ An Angular Material Color Picker.
 
  Angular     | @nng-components/angular-material-color-picker
  ----------- | -------------------
+ 20          | 20.x+
  19          | 19.x+
+ 18          | 18.x+
+ 17          | 17.x+
+ 16          | 16.x+
  
 
 ## Getting started

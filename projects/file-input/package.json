@@ -1,6 +1,6 @@
 {
   "name": "@nng-components/angular-material-file-input",
-  "version": "19.0.0",
+  "version": "20.0.0",
   "description": "Angular Material File Input",
   "author": "HO Hong Quan",
   "maintainers": ["nng-dev <developer.1.nng@gmail.com>"],
@@ -22,6 +22,8 @@
     "angular 16",
     "angular 17",
     "angular 18",
+    "angular 19",
+    "angular 20",
     "angular-material",
     "angular material file input",
     "angular material file drop",
@@ -32,11 +34,11 @@
   ],
   "license": "MIT",
   "peerDependencies": {
-    "@angular/platform-browser": "^19.0.0",
-    "@angular/common": "^19.0.0",
-    "@angular/core": "^19.0.0",
-    "@angular/forms": "^19.0.0",
-    "@angular/material": "^19.0.0",
-    "@angular/cdk": "^19.0.0"
+    "@angular/platform-browser": "^19.0.0 || ^20.0.0",
+    "@angular/common": "^19.0.0 || ^20.0.0",
+    "@angular/core": "^19.0.0 || ^20.0.0",
+    "@angular/forms": "^19.0.0 || ^20.0.0",
+    "@angular/material": "^19.0.0 || ^20.0.0",
+    "@angular/cdk": "^19.0.0 || ^20.0.0"
   }
 }

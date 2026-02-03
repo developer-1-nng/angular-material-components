@@ -1,4 +1,4 @@
-# Angular Material Extra Components (DatetimePicker, TimePicker, ColorPicker, FileInput ...) for @angular/material 16.x, 17.x, 18.x
+# Angular Material Extra Components (DatetimePicker, TimePicker, ColorPicker, FileInput ...) for @angular/material 16.x, 17.x, 18.x, 19.x, 20.x
 
 
 ## Description
@@ -20,6 +20,8 @@ Choose the version corresponding to your Angular version:
 
  Angular     | @nng-components/angular-material-datetime-picker
  ----------- | -------------------
+ 20          | 20.x+
+ 19          | 19.x+
  18          | 18.x+
  17          | 17.x+
  16          | 16.x+
